@@ -16,5 +16,16 @@ namespace Tasks1 {
 	void UgolTela();
 	void Pow();
 	void SumQuad();
+	bool duplicateChars(string str);
+	string getInitials(string str);
+	int differenceEvenOdd(int array[5]);
+	bool equalToAvg(int array[5]);
+	void indexMult(int array[5]);
+	string reverse(string str);
+	int Tribonacci(int x);
+	string pseudoHash(int x);
+	string botHelper(string str);
+	bool isAnagram(string fs, string ss);
+	string isPalindrome(int num);
 	string DayInWeek(int);
 }
