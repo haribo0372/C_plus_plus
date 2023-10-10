@@ -28,4 +28,6 @@ namespace Tasks1 {
 	bool isAnagram(string fs, string ss);
 	string isPalindrome(int num);
 	string DayInWeek(int);
+	void countBracket(string file_name);
+	float ChainShot(int x);
 }

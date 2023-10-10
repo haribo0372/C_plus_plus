@@ -1,0 +1,41 @@
+#include <string>
+
+using namespace std;
+#pragma once
+namespace Tasks1 {
+	void numbersInNumber();
+	void mathvalue();
+	void ChangeRegisterForchar();
+	void MinKM();
+	void ConverteASCII();
+	void DrawTheTriangle();
+	void numbers10();
+	void AlgbrSum();
+	void AlgbrSumPow();
+	void MaxMinNum();
+	void UgolTela();
+	void Pow();
+	void SumQuad();
+	bool duplicateChars(string str);
+	string getInitials(string str);
+	int differenceEvenOdd(int array[5]);
+	bool equalToAvg(int array[5]);
+	void indexMult(int array[5]);
+	string reverse(string str);
+	int Tribonacci(int x);
+	string pseudoHash(int x);
+	string botHelper(string str);
+	bool isAnagram(string fs, string ss);
+	string isPalindrome(int num);
+	string DayInWeek(int);
+	void countBracket(string file_name);
+}
+
+
+
+
+
+
+
+
+1+1/(1+1)

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include <string>
 #include <vector>
 #define _USE_MATH_DEFINES
@@ -205,7 +206,7 @@ namespace Tasks1 {
 	}
 
 	string getInitials(string str) {
-		// input с помощью файла; output в консоль
+		//getline(cin, str)
 		unsigned short i = 0;
 		string result;
 		result += str[0];
@@ -321,5 +322,49 @@ namespace Tasks1 {
 		week[6] = "Saturday";
 		week[7] = "Sunday";
 		return week[key];
+	}
+
+	void countBracket(string file_name) {
+		ifstream file(file_name);
+		if (!file.is_open()) {
+			cout << "File not found";
+		}
+		else {
+			int countBrOpen = 0;
+			int countBrClose = 0;
+			char ch;
+			file >> ch;
+			while (ch) {
+				cout << ch << "\n";
+				if (ch == '{') {
+					countBrOpen++;
+					if (countBrClose > countBrOpen) break;
+				}
+				else if (ch == '}') {
+					countBrClose++;
+					if (countBrClose != countBrOpen) break;
+				}
+				file >> ch;
+			}
+			file.close();
+
+			if (countBrOpen == 0 && countBrClose == 0) {
+				cout << "Curly brackets are not found";
+			}
+			else if (countBrOpen+1 == countBrClose) {
+				cout << "Balance is so good";
+			}
+			else {
+				cout << countBrOpen << " " << countBrClose << " The balance is broken";
+			}
+		}
+	}
+
+	float ChainShot(int x) {
+		float result = 2.0;
+		for (int i = 1; i < x; i++) {
+			result = 1 + 1 / result;
+		}
+		return result;
 	}
 }
